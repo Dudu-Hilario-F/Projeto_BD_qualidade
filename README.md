@@ -42,5 +42,3 @@ Para facilitar o acesso, estou usando o **Autonomous Database**. Ele permite sub
 
 ## Como se conectar ao banco de dados
 Atualmente, estou finalizando a criação do banco de dados, corrigindo erros de codificação para garantir que ele funcione corretamente. Em seguida, subirei o banco para a nuvem e criarei um usuário para acesso.
-
-# Projeto_BD_qualidade
