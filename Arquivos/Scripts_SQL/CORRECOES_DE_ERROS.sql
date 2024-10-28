@@ -1,0 +1,10 @@
+SELECT * FROM CATEGORIA;
+
+ALTER TABLE CATEGORIA
+ADD CONSTRAINT CHK_CATEGORIA_NAME
+CHECK (UPPER(nome) IN ('Resfriados', 'Salgados', 'Climatizados', 'Bovinos', 'Suinos', 'Congelados')) -- ALTERADO COM ERRO EU QUERO APENAS UMA CATEGORIA DA LISTA
+
+-- CATEGORIA ARRUMADA
+DROP TABLE CATEGORIA PURGE;
+
+                                            

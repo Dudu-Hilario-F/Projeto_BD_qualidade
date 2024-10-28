@@ -1,0 +1,4 @@
+
+
+INSERT INTO CATEGORIA (nome) VALUES ('SALGADOS');
+INSERT INTO CATEGORIA (nome) VALUES ('resfriados');
