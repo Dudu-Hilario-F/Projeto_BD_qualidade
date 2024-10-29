@@ -9,7 +9,6 @@
 - Como se conectar ao banco de dados
     
 # Arquitetura
-![Modelagem banco](img_modelagem/Arq_etapa1.png)
 Esse projeto nasceu da necessidade de resolver um problema enfrentado no centro de distribuição de alimentos perecíveis, especificamente no setor de qualidade. O profissional da qualidade tem a função de receber, analisar e aprovar os produtos, além de acompanhar o armazenamento adequadamente dessas mercadorias, monitorar o produto, manter controle de validade e realizar o PEPS (Primeiro a Entrar, Primeiro a Sair). Oprofissional é também responsável por identificar problemas a partir das reclamações das filiais e monitorar as temperaturas dos alimentos e do ambiente.
 
 Entretanto, esse profissional enfrenta desafios significativos devido à falta de acesso ao sistema da empresa e à ausência de um computador para acompanhar esses alimentos desde o recebimento até a expedição. Essa situação dificultava a realização das tarefas desse profissional, gerando retrabalho e aumentando a possibilidade de erros.
@@ -41,4 +40,5 @@ Para facilitar o acesso, estou usando o **Autonomous Database**. Ele permite sub
 
 
 ## Como se conectar ao banco de dados
-Atualmente, estou finalizando a criação do banco de dados, corrigindo erros de codificação para garantir que ele funcione corretamente. Em seguida, subirei o banco para a nuvem e criarei um usuário para acesso.
+Atualmente, estou finalizando a modelagem e a criação do banco de dados, corrigindo erros de codificação para garantir que ele funcione corretamente. Em seguida, subirei o banco para a nuvem e criarei um usuário para acesso.
+
