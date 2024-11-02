@@ -23,3 +23,30 @@ TO '/u01/app/oracle/oradata/ORCL/datafile/filial.dbf';
 -- DATAFILE BACALHAU
 ALTER DATABASE MOVE DATAFILE '/u01/app/oracle/homes/OraDB21Home1/dbs/C:UsersduduDesktopprojetosQualidadeBDArquivosTABLESPACESoradata_bacalhaubacalhau.dbf' 
 TO '/u01/app/oracle/oradata/ORCL/datafile/bacalhau.dbf';
+
+-- REMOVENDO O LOTE DA TABELA DE BACALHAU
+ALTER TABLE PRODUTOS_BACALHAU
+DROP COLUMN LOTE;
+
+ALTER TABLE PRODUTOS_BACALHAU
+ADD (
+
+    tipo_produto varchar2(100) NOT NULL,
+    classif_por_origem varchar2(100) NOT NULL,
+    variacoes_bacalhau varchar2(100) NOT NULL
+);
+
+ALTER TABLE PRODUTOS_BACALHAU
+DROP COLUMN ID_CATEGORIA_FK;
+
+ALTER TABLE PRODUTOS_BACALHAU
+ADD (
+
+    fk_categoria_id INT NOT NULL,
+    
+    CONSTRAINT CHK_ESTRANGEIRA FOREIGN KEY (fk_categoria_id) REFERENCES CATEGORIA (ID_CATEGORIA)
+
+
+);
+
+-- FIM ALTERAÇÕES BACALHAU
