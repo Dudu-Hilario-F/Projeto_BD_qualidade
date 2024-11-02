@@ -9,6 +9,7 @@
 - Como se conectar ao banco de dados
     
 # Arquitetura
+![Modelagem do banco](./img_modelagem/Modelagem_Parte2.png)
 Esse projeto nasceu da necessidade de resolver um problema enfrentado no centro de distribuição de alimentos perecíveis, especificamente no setor de qualidade. O profissional da qualidade tem a função de receber, analisar e aprovar os produtos, além de acompanhar o armazenamento adequadamente dessas mercadorias, monitorar o produto, manter controle de validade e realizar o PEPS (Primeiro a Entrar, Primeiro a Sair). Oprofissional é também responsável por identificar problemas a partir das reclamações das filiais e monitorar as temperaturas dos alimentos e do ambiente.
 
 Entretanto, esse profissional enfrenta desafios significativos devido à falta de acesso ao sistema da empresa e à ausência de um computador para acompanhar esses alimentos desde o recebimento até a expedição. Essa situação dificultava a realização das tarefas desse profissional, gerando retrabalho e aumentando a possibilidade de erros.
