@@ -1,0 +1,19 @@
+CREATE TABLE ARMAZENAMENTO_BACALHAU(
+    idArmazenamentoBaca        NUMBER(5) GENERATED ALWAYS AS IDENTITY CONSTRAINT CHK_ARMAZENAMENTO_BACA PRIMARY KEY,
+    data_entrada               DATE NOT NULL,
+    temp_camara                FLOAT NOT NULL,
+    quantidade                 INTEGER NOT NULL,
+    status                     VARCHAR2(20) NOT NULL,
+    foto_camara                BLOB NOT NULL,
+    
+    
+    -- CONSTRAINTS E CHAVES ESTRANGEIRAS
+    idProdutoBaca             INTEGER NOT NULL,
+    idAnaliseBaca             INTEGER NOT NULL,
+    
+    CONSTRAINT CHK_ARMAZENAMENTO_PRODUTOBACA_FK FOREIGN KEY (idProdutoBaca) REFERENCES PRODUTOS_BACALHAU (id_bacalhau),
+    CONSTRAINT CHK_ARMAZENAMENTO_ANALISE_FK FOREIGN KEY (idAnaliseBaca) REFERENCES BACALHAU_ANALISE (idAnaliseBaca),
+    CONSTRAINT CHK_QNTD CHECK (quantidade >= 0)
+
+
+)TABLESPACE TBS_ARMAZENAMENTO_BACA;
