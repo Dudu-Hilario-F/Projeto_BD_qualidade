@@ -39,6 +39,10 @@ O banco de dados foi montado em uma máquina virtual (VM) que simula um servidor
 
 Para facilitar o acesso, estou usando o **Autonomous Database**. Ele permite subir uma cópia do banco diretamente para a nuvem, o que elimina a necessidade de abrir a VM sempre que preciso acessar o banco. Assim, não é preciso iniciar o listener manualmente na VM toda vez que quero usar o banco de dados.
 
+## Diagrama de cada setor
+### Bacalhau
+![Diagrama do setor bacalhau](img_modelagem/setor_bacalhau.png)
+
 
 ## Como se conectar ao banco de dados
 Atualmente, estou finalizando a modelagem e a criação do banco de dados, corrigindo erros de codificação para garantir que ele funcione corretamente. Em seguida, subirei o banco para a nuvem e criarei um usuário para acesso.
