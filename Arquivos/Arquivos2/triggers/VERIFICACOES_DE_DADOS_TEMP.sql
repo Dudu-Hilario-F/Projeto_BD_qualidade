@@ -1,0 +1,20 @@
+-- IRA CHECAR SE TEM DADO DENTRO DA TABELA TEMPORARIA PARA QUE EU POSSA ATUALIZAR
+-- UMA TABELA PERMANENTE COM OS DADOS DENTRO
+
+CREATE OR REPLACE TRIGGER CHECAGEM_RECEBIMENTO_TEMP
+BEFORE INSERT OR UPDATE ON BACALHAU_ANALISE
+FOR EACH ROW
+DECLARE
+    v_count INTEGER;
+BEGIN
+    -- Verifica se o idRecebimentoTemp existe na tabela temporária
+    SELECT COUNT(*) INTO v_count
+    FROM RECEBIMENTO_TEMPORARIO
+    WHERE idrecebimentotemp = :NEW.idrecebimentotemp;
+
+    -- Se não existir, lança um erro
+    IF v_count = 0 THEN
+        RAISE_APPLICATION_ERROR(-20001, 'O idRecebimentoTemp não existe na tabela RECEBIMENTO_TEMPORARIO');
+    END IF;
+END;
+/
